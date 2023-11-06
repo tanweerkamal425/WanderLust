@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br><br>
+            <h1>Create a new listing</h1>
+            <form enctype="multipart/form-data" method="post" action="/listings" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" id="title" name="listing[title]" type="text" placeholder="Enter a Cachy title" required>
+                    <div class="invalid-feedback">Please enter valid title</div>
+                </div>
+            
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" id="description" name="listing[description]" cols="30" rows="5"
+                        placeholder="enter description..." required></textarea>
+                    <div class="invalid-feedback">Please enter valid description</div>
+                </div>
+            
+                <div class="mb-3">
+                    <label class="form-label" for="image">Upload image</label>
+                    <input class="form-control" id="image" name="listing[image]" type="file" required>
+                </div>
+            
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label" for="price">Price</label>
+                        <input class="form-control" id="price" name="listing[price]" placeholder="&#8377 9,999" required>
+                        <div class="invalid-feedback">Please enter valid price</div>
+                    </div>
+                    
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label" for="locaiton">Location</label>
+                        <input class="form-control" id="lcoation" name="listing[location]" type="text" placeholder="Digha, West Bengal" required>
+                        <div class="invalid-feedback">Please enter valid location</div>
+                    </div>
+                </div>
+            
+                <div class="mb-3">
+                    <label class="form-label" for="country">Country</label>
+                    <input class="form-control" id="country" name="listing[country]" type="text" placeholder="India" required>
+                    <div class="invalid-feedback">Please enter valid country</div>
+                </div>
+                <button class="btn btn-dark add-btn">Add</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</body>
