@@ -64,9 +64,10 @@ const sessionOption = {
     },
 };
 
-// app.get("/", (req, res) => {
-//     res.send("Hi, I am route");
-// });
+
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 
 
